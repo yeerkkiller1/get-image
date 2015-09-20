@@ -16,8 +16,9 @@ app.use(allowCrossDomain);
 function doRequest(url, res) {
 	console.log("Requesting url", url);
 
-	exec("downloadBase64\\bin\\Release\\downloadBase64.exe", function(error, stdout, stderror){
+	exec("mono downloadBase64/bin/Release/downloadBase64.exe", function(error, stdout, stderror){
 		error = error || stderror.toString();
+
 		if(error) {
 			console.error(error);
 		}
