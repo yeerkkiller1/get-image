@@ -17,6 +17,7 @@ function doRequest(url, res) {
 	console.log("Requesting url", url);
 
 	exec("downloadBase64\\bin\\Release\\downloadBase64.exe", function(error, stdout, stderror){
+		error = error || stderror.toString();
 		if(error) {
 			console.error(error);
 		}
@@ -30,7 +31,7 @@ function doRequest(url, res) {
 	});
 }
 
-app.get("/*", function(req, res) {
+app.get("*", function(req, res) {
 	console.log("Got request", req.path);
 	var url = unescape(req.path).slice(1) + "/favicon.ico";
 	doRequest(url, res);
@@ -42,6 +43,8 @@ app.listen(2500, function() {
 });
 */
 
+console.log("Before https setup");
+
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
@@ -49,12 +52,11 @@ var privateKey  = fs.readFileSync('../SiteWatcher/key.pem', 'utf8');
 var certificate = fs.readFileSync('../SiteWatcher/cert.pem', 'utf8');
 
 var credentials = {key: privateKey, cert: certificate};
-var express = require('express');
-
-// your express configuration here
 
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
+
+console.log("After https setup");
 
 //httpServer.listen(80);
 httpsServer.listen(2500);
