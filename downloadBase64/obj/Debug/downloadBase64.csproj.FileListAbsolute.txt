@@ -1,0 +1,6 @@
+C:\repos\getImage\downloadBase64\bin\Debug\downloadBase64.exe.config
+C:\repos\getImage\downloadBase64\bin\Debug\downloadBase64.exe
+C:\repos\getImage\downloadBase64\bin\Debug\downloadBase64.pdb
+C:\repos\getImage\downloadBase64\obj\Debug\downloadBase64.csprojResolveAssemblyReference.cache
+C:\repos\getImage\downloadBase64\obj\Debug\downloadBase64.exe
+C:\repos\getImage\downloadBase64\obj\Debug\downloadBase64.pdb
