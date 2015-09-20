@@ -48,12 +48,12 @@ var certificate = fs.readFileSync('../SiteWatcher/cert.pem', 'utf8');
 
 var credentials = {key: privateKey, cert: certificate};
 
-//var httpServer = http.createServer(app);
-var httpsServer = https.createServer(credentials, app);
+var httpServer = http.createServer(app);
+//var httpsServer = https.createServer(credentials, app);
 
 console.log(typeof privateKey);
 
 console.log("After https setup");
 
-//httpServer.listen(80);
-httpsServer.listen(5555);
+httpServer.listen(5555);
+//httpsServer.listen(5555);
