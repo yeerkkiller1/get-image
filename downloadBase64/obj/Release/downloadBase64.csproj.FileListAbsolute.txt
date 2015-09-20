@@ -3,3 +3,9 @@ C:\repos\getImage\downloadBase64\bin\Release\downloadBase64.exe
 C:\repos\getImage\downloadBase64\bin\Release\downloadBase64.pdb
 C:\repos\getImage\downloadBase64\obj\Release\downloadBase64.exe
 C:\repos\getImage\downloadBase64\obj\Release\downloadBase64.pdb
+C:\repos\get-image\downloadBase64\bin\Release\downloadBase64.exe.config
+C:\repos\get-image\downloadBase64\obj\Release\downloadBase64.exe
+C:\repos\get-image\downloadBase64\obj\Release\downloadBase64.pdb
+C:\repos\get-image\downloadBase64\bin\Release\downloadBase64.exe
+C:\repos\get-image\downloadBase64\bin\Release\downloadBase64.pdb
+C:\repos\get-image\downloadBase64\obj\Release\downloadBase64.csprojResolveAssemblyReference.cache
