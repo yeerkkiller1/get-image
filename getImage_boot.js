@@ -1,5 +1,5 @@
 var express = require("express");
-var exec = require("child_process").exec;
+var exec = require("exec");
 var app = express();
 
 
