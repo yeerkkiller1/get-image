@@ -38,12 +38,6 @@ app.get("*", function(req, res) {
 	doRequest(url, res);
 });
 
-/*
-app.listen(2500, function() {
-	console.log("Started server");
-});
-*/
-
 console.log("Before https setup");
 
 var fs = require('fs');
@@ -54,10 +48,12 @@ var certificate = fs.readFileSync('../SiteWatcher/cert.pem', 'utf8');
 
 var credentials = {key: privateKey, cert: certificate};
 
-var httpServer = http.createServer(app);
+//var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
+
+console.log(typeof privateKey);
 
 console.log("After https setup");
 
 //httpServer.listen(80);
-httpsServer.listen(2500);
+httpsServer.listen(5555);
