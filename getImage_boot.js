@@ -1,5 +1,5 @@
 var express = require("express");
-var exec = require("child_process").exec;
+var exec = require("exec");
 var app = express();
 
 
@@ -16,7 +16,7 @@ app.use(allowCrossDomain);
 function doRequest(url, res) {
 	console.log("Requesting url", url);
 
-	exec("mono downloadBase64/bin/Release/downloadBase64.exe", function(error, stdout, stderror){
+	exec(["mono", "downloadBase64/bin/Release/downloadBase64.exe", url], function(error, stdout, stderror){
 		error = error || stderror.toString();
 
 		if(error) {
